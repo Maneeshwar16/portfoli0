@@ -39,21 +39,21 @@ const Skills = () => {
       icon: Smartphone,
       title: 'MOBILE',
       color: 'bg-purple-600',
-      skills: ['React Native', 'Flutter', 'iOS', 'Android', 'Expo'],
+      skills: ['React Native', 'Flutter',  'Android', 'Kotlin' ,'Loading....'],
       delay: 400
     },
     {
       icon: Globe,
       title: 'WEB TECH',
       color: 'bg-red-600',
-      skills: ['HTML5', 'CSS3', 'JavaScript', 'REST APIs', 'GraphQL'],
+      skills: ['HTML5', 'CSS3', 'JavaScript', 'REST APIs', 'Loading....'],
       delay: 600
     },
     {
       icon: Palette,
       title: 'DESIGN',
       color: 'bg-pink-600',
-      skills: ['Figma', 'Adobe XD', 'UI/UX', 'Photoshop', 'Illustrator'],
+      skills: ['Figma',  'UI/UX', 'Photoshop', 'Loading....'],
       delay: 800
     },
     {

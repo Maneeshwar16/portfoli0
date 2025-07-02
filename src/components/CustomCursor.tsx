@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import awsLogo from '../../logo\'s/aws.svg';
+import uiuxLogo from '../../logo\'s/ui design.png';
+import restLogo from '../../logo\'s/rest.png';
+import photoshopLogo from '../../logo\'s/photoshop.png';
 
 interface CursorState {
   x: number;
@@ -91,8 +95,32 @@ const CustomCursor = () => {
       'CSS3': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
       'Git': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
       'Docker': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
-      'AWS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg',
-      'Firebase': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg'
+      'AWS': awsLogo,
+      'Firebase': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
+      'Tailwind CSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+      'Bootstrap': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+      'Express': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+      'Next.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+      'Vue.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
+      'Nuxt.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg',
+      'Github': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+      'Figma': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+      'Photoshop': photoshopLogo,
+      'Adobe Illustrator': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/adobeillustrator/adobeillustrator-plain.svg',
+      'Adobe XD': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/adobexd/adobexd-original.svg',
+      'Adobe After Effects': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/adobeaftereffects/adobeaftereffects-plain.svg',
+      'Adobe Premiere Pro': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/adobepremierepro/adobepremierepro-plain.svg',
+      'Adobe InDesign': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/adobein/adobein-original.svg',
+      'Vercel': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg',
+      'Framer': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framer/framer-original.svg',
+      'Android': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg',
+      'IOS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg',
+      'Flutter': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg',
+      'Kotlin': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg',
+      'Swift': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg',
+      'React Native': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+      'UI/UX': uiuxLogo,
+      'REST APIs': restLogo,
     };
     return icons[tech] || '';
   };
@@ -131,7 +159,7 @@ const CustomCursor = () => {
             <img
               src={getTechIcon(cursor.hoverType)}
               alt={cursor.hoverType}
-              className="w-20 h-20"
+              className="w-40 h-50"
             />
           </div>
         </div>
