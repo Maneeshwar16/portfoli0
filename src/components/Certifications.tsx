@@ -2,18 +2,13 @@ import React from 'react';
 
 const certificates = [
   {
-    title: 'UI/UX Design Training',
-    file: 'UI_UX Design Training - Certificate of Completion.pdf',
+    title: 'AWS Certified Cloud Practitioner',
+    file: 'AWS Certified Cloud Practitioner certificate.pdf',
     type: 'pdf',
   },
   {
-    title: 'Maneeshwar',
-    file: 'Maneeshwar  .pdf',
-    type: 'pdf',
-  },
-  {
-    title: 'Z1g2tDk',
-    file: 'Z1g2tDk.pdf',
+    title: 'Devtown',
+    file: 'Devtown.pdf',
     type: 'pdf',
   },
   {
@@ -21,66 +16,60 @@ const certificates = [
     file: 'DT.png',
     type: 'image',
   },
+  {
+    title: 'Hackfrost',
+    file: 'Hackfrost.pdf',
+    type: 'pdf',
+  },
+  {
+    title: 'ISRO',
+    file: 'isro.pdf',
+    type: 'pdf',
+  },
+  {
+    title: 'UI/UX Design Training',
+    file: 'UI_UX Design Training - Certificate of Completion.pdf',
+    type: 'pdf',
+  },
 ];
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="py-20 bg-yellow-200 relative overflow-hidden">
-      {/* Comic Panel Grid Background */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div className="w-full h-full" style={{
-          backgroundImage: `
-            linear-gradient(black 2px, transparent 2px),
-            linear-gradient(90deg, black 2px, transparent 2px)
-          `,
-          backgroundSize: '100px 100px'
-        }}></div>
-      </div>
-      <div className="container mx-auto px-6 relative">
-        <div className="text-center mb-16">
-          <div className="relative inline-block mb-6">
-            <div className="bg-red-400 text-white px-8 py-4 border-6 border-black transform rotate-2 shadow-2xl">
-              <h2 className="text-5xl font-black">CERTIFICATIONS</h2>
-            </div>
-            {/* Comic explosion */}
-            <div className="absolute -top-8 -right-8 w-20 h-20 bg-white border-4 border-black rounded-full flex items-center justify-center animate-spin-slow">
-              <span className="text-black font-black text-lg">WOW!</span>
-            </div>
+    <section className="py-20 bg-yellow-100 px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <div className="inline-block bg-red-600 text-white px-6 py-3 text-4xl font-extrabold border-4 border-black transform -rotate-2 shadow-lg">
+            CERTIFICATIONS
           </div>
-          <div className="bg-white border-4 border-black px-6 py-3 inline-block transform -rotate-1 shadow-xl">
-            <p className="text-xl text-black font-black">
-              HERE ARE SOME OF MY SUPER CERTIFICATES!
-            </p>
-          </div>
+          <p className="mt-4 text-xl font-bold text-black bg-white border-4 border-black inline-block px-4 py-2 shadow transform rotate-1">
+            Tap to view my heroic achievements!
+          </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certificates.map((cert, idx) => (
-            cert.type === 'pdf' ? (
-              <a
-                key={cert.title}
-                href={'/Certificates/' + cert.file}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white border-6 border-black p-6 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-rotate-2 flex flex-col items-center cursor-pointer"
-              >
-                <div className="w-full h-48 flex items-center justify-center border-4 border-black mb-4 bg-gray-100 text-black font-bold text-lg">
-                  {cert.title}
-                </div>
-                <div className="bg-yellow-400 text-black px-4 py-2 border-3 border-black font-black text-lg transform -rotate-3 shadow-lg">
-                  {cert.title}
-                </div>
-              </a>
-            ) : (
-              <div
-                key={cert.title}
-                className="bg-white border-6 border-black p-6 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-rotate-2 flex flex-col items-center"
-              >
-                <img src={'/Certificates/' + cert.file} alt={cert.title} className="w-full h-48 object-contain border-4 border-black mb-4 bg-gray-100" />
-                <div className="bg-yellow-400 text-black px-4 py-2 border-3 border-black font-black text-lg transform -rotate-3 shadow-lg">
-                  {cert.title}
-                </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {certificates.map((cert) => (
+            <a
+              key={cert.title}
+              href={`/Certificates/${cert.file}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white border-4 border-black p-4 rounded-xl shadow-lg transform hover:-rotate-1 hover:scale-105 transition-all duration-300 group"
+            >
+              <div className="flex flex-col items-center justify-center h-48 border-4 border-black bg-yellow-300 mb-4 text-center px-4 py-2 font-bold text-lg text-black">
+                {cert.type === 'image' ? (
+                  <img
+                    src={`/Certificates/${cert.file}`}
+                    alt={cert.title}
+                    className="object-contain max-h-40"
+                  />
+                ) : (
+                  <span>{cert.title}</span>
+                )}
               </div>
-            )
+              <div className="text-center text-white bg-red-600 border-4 border-black px-4 py-2 font-black text-lg transform -rotate-1 shadow">
+                VIEW {cert.type === 'pdf' ? 'PDF' : 'IMAGE'}
+              </div>
+            </a>
           ))}
         </div>
       </div>
@@ -88,4 +77,4 @@ const Certifications = () => {
   );
 };
 
-export default Certifications; 
+export default Certifications;
