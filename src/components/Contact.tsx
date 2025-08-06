@@ -234,7 +234,7 @@ const Contact = () => {
                     <a
                       key={social.label}
                       href={social.url}
-                      className={`w-16 h-16 bg-gray-100 border-3 border-black rounded-full flex items-center justify-center text-black ${social.color} text-white transform hover:scale-125 hover:-rotate-12 transition-all duration-300 shadow-lg hover:shadow-xl`}
+                     className={`w-16 h-16 bg-gray-100 border-3 border-black rounded-full flex items-center justify-center text-black ${social.color} transform hover:scale-125 hover:-rotate-12 transition-all duration-300 shadow-lg hover:shadow-xl`}
                       aria-label={social.label}
                     >
                       <Icon size={24} />
