@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, MessageCircle, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,15 +41,15 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'HERO SIGNAL',
-      value: 'maneeshwar@vitap.ac.in',
-      link: 'mailto:maneeshwar@vitap.ac.in',
+      value: 'saibabu16.javvaji@gmail.com',
+      link: 'mailto:saibabu16.javvaji@gmail.com',
       color: 'bg-red-600'
     },
     {
       icon: Phone,
       label: 'EMERGENCY LINE',
-      value: '+91 9876543210',
-      link: 'tel:+919876543210',
+      value: '+91 8341186173',
+      link: 'tel:+8341186173',
       color: 'bg-green-600'
     },
     {
@@ -60,27 +60,20 @@ const Contact = () => {
       color: 'bg-blue-600'
     }
   ];
-
-  const socialLinks = [
-    {
-      icon: Github,
-      label: 'GitHub',
-      url: '#',
-      color: 'hover:bg-gray-800'
-    },
-    {
-      icon: Linkedin,
-      label: 'LinkedIn',
-      url: '#',
-      color: 'hover:bg-blue-600'
-    },
-    {
-      icon: Twitter,
-      label: 'Twitter',
-      url: '#',
-      color: 'hover:bg-sky-500'
-    }
-  ];
+const socialLinks = [
+  {
+    icon: Github,
+    label: 'GitHub',
+    url: 'https://github.com/Maneeshwar16',
+    color: 'hover:bg-gray-800'
+  },
+  {
+    icon: Instagram,
+    label: 'Instagram',
+    url: 'https://www.instagram.com/maneeshwar_.j',
+    color: 'hover:bg-pink-500'
+  }
+];
 
   return (
     <section id="contact" className="py-20 bg-purple-500 relative overflow-hidden">

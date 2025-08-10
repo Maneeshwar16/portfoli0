@@ -54,8 +54,8 @@ const Certifications = () => {
       delay: 600
     },
     {
-      title: 'SPACE EXPLORER',
-      subtitle: 'ISRO Certification',
+      title: 'ORACLE MASTER',
+      subtitle: 'Oracle Certification',
       file: 'oracle_Certificate.pdf',
       type: 'pdf',
       color: 'bg-red-600',
