@@ -22,56 +22,52 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'E-COMMERCE FORTRESS',
-      description: 'A MIGHTY full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard to DEFEAT online shopping villains!',
-      tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
-      color: 'bg-blue-600',
-      delay: 0
-    },
-    {
-      title: 'WEATHER COMMAND CENTER',
-      description: 'A SUPER-POWERED weather application with real-time data, 7-day forecasts, and interactive maps. Built with React and OpenWeather API to CONTROL the elements!',
-      tags: ['React', 'API', 'Tailwind', 'Maps'],
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=600',
+      title: 'AI EXPENSE GUARDIAN',
+      description:
+        'A POWERFUL full-stack expense tracker built with Flask, React, and Redis. Equipped with JWT shields for secure access, AI warriors to auto-categorize expenses, and dashboards that UNMASK spending villains in real time! Supports multi-payment apps and conquers PDF/Excel files with ease!',
+      tags: ['Flask', 'React', 'Redis', 'JWT', 'Vercel', 'Render'],
+      image:
+        'public/ai_expense_tracker.png',
       color: 'bg-green-600',
-      delay: 200
+      delay: 0,
+      demo: 'https://expense-tracker-lake-sigma.vercel.app/',
+      code: 'https://github.com/sai16-hub/expense-tracker'
     },
     {
-      title: 'TASK MASTER HEADQUARTERS',
-      description: 'A LEGENDARY project management tool with team collaboration, real-time updates, and advanced analytics to ORGANIZE the chaos of development!',
-      tags: ['Vue.js', 'Firebase', 'Charts', 'PWA'],
-      image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600',
-      color: 'bg-purple-600',
-      delay: 400
-    },
-    {
-      title: 'SOCIAL MEDIA WATCHTOWER',
-      description: 'An EPIC analytics dashboard for social media management with data visualization and automated reporting to MONITOR the digital universe!',
-      tags: ['Next.js', 'D3.js', 'PostgreSQL', 'API'],
-      image: 'https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=600',
-      color: 'bg-red-600',
-      delay: 600
-    }
-  ];
+  title: 'DIGITAL DESK',
+  description: 'An interactive full-stack Todo and workspace app with a React + Vite frontend and Node.js + Express backend. Packed with JWT-based authentication, CRUD-based todo management, drag-and-drop task interface, real-time updates, and a stylish responsive design via Tailwind & Framer Motion.',
+  tags: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Tailwind CSS', 'Framer Motion'],
+  image: 'public/digital desk.png',
+  color: 'bg-purple-600',
+  delay: 0,
+  demo: 'https://digital-desk.vercel.app/',
+  code: 'https://github.com/Maneeshwar16/digital-desk'
+
+}
+  ]
 
   return (
     <section id="projects" className="py-20 bg-blue-500 relative overflow-hidden">
       {/* Comic Panel Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="w-full h-full" style={{
-          backgroundImage: `
-            linear-gradient(black 3px, transparent 3px),
-            linear-gradient(90deg, black 3px, transparent 3px)
-          `,
-          backgroundSize: '150px 150px'
-        }}></div>
+        <div
+          className="w-full h-full"
+          style={{
+            backgroundImage: `
+              linear-gradient(black 3px, transparent 3px),
+              linear-gradient(90deg, black 3px, transparent 3px)
+            `,
+            backgroundSize: '150px 150px'
+          }}
+        ></div>
       </div>
 
       <div className="container mx-auto px-6 relative">
-        <div className={`text-center mb-16 transform transition-all duration-1000 ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-        }`}>
+        <div
+          className={`text-center mb-16 transform transition-all duration-1000 ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          }`}
+        >
           <div className="relative inline-block mb-6">
             <div className="bg-yellow-400 text-black px-8 py-4 border-6 border-black transform -rotate-2 shadow-2xl">
               <h2 className="text-6xl font-black">EPIC MISSIONS</h2>
@@ -89,7 +85,7 @@ const Projects = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div
               key={project.title}
               className={`group transform transition-all duration-1000 ${
@@ -97,26 +93,30 @@ const Projects = () => {
               }`}
               style={{ transitionDelay: `${project.delay}ms` }}
             >
-              <div className="bg-white border-6 border-black overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 hover:-rotate-2">
-                {/* Project Image with Comic Overlay */}
+              <div className="bg-gray-800 border-6 border-black overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 hover:-rotate-2">
+                {/* Project Image */}
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  {/* Comic halftone overlay */}
-                  <div className="absolute inset-0 opacity-30" style={{
-                    backgroundImage: `radial-gradient(circle, #000 1px, transparent 1px)`,
-                    backgroundSize: '10px 10px'
-                  }}></div>
-                  
-                  <div className={`absolute inset-0 ${project.color} opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center`}>
+
+                  {/* Overlay with Icons */}
+                  <div
+                    className={`absolute inset-0 ${project.color} opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center`}
+                  >
                     <div className="flex space-x-4">
-                      <button className="w-16 h-16 bg-white border-4 border-black rounded-full text-black hover:scale-125 transition-transform duration-300 flex items-center justify-center font-black">
+                      <button
+                        onClick={() => window.open(project.demo, '_blank')}
+                        className="w-16 h-16 bg-white border-4 border-black rounded-full text-black hover:scale-125 transition-transform duration-300 flex items-center justify-center font-black"
+                      >
                         <Eye size={24} />
                       </button>
-                      <button className="w-16 h-16 bg-white border-4 border-black rounded-full text-black hover:scale-125 transition-transform duration-300 flex items-center justify-center font-black">
+                      <button
+                        onClick={() => window.open(project.code, '_blank')}
+                        className="w-16 h-16 bg-white border-4 border-black rounded-full text-black hover:scale-125 transition-transform duration-300 flex items-center justify-center font-black"
+                      >
                         <Github size={24} />
                       </button>
                       <button className="w-16 h-16 bg-white border-4 border-black rounded-full text-black hover:scale-125 transition-transform duration-300 flex items-center justify-center font-black">
@@ -129,7 +129,9 @@ const Projects = () => {
                 {/* Project Content */}
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
-                    <div className={`${project.color} text-white px-4 py-2 border-3 border-black font-black text-lg transform -rotate-1 shadow-lg`}>
+                    <div
+                      className={`${project.color} text-white px-4 py-2 border-3 border-black font-black text-lg transform -rotate-1 shadow-lg`}
+                    >
                       {project.title}
                     </div>
                     <div className="w-12 h-12 bg-yellow-400 border-3 border-black rounded-full flex items-center justify-center transform rotate-12">
@@ -137,13 +139,13 @@ const Projects = () => {
                     </div>
                   </div>
 
-                  <p className="text-black font-bold leading-relaxed mb-6">
+                  <p className="text-white font-bold leading-relaxed mb-1">
                     {project.description}
                   </p>
 
-                  {/* Comic Tags */}
+                  {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag, tagIndex) => (
+                    {project.tags.map((tag) => (
                       <span
                         key={tag}
                         className="bg-yellow-400 border-2 border-black px-3 py-1 text-black font-black text-sm hover:scale-110 transition-transform duration-300 cursor-pointer transform hover:-rotate-3 shadow-lg"
@@ -155,13 +157,19 @@ const Projects = () => {
 
                   {/* Action Buttons */}
                   <div className="flex space-x-4">
-                    <button className="flex-1 bg-blue-600 text-white border-4 border-black px-4 py-3 font-black hover:bg-blue-700 transform hover:scale-105 hover:-rotate-1 transition-all duration-300 shadow-xl">
+                    <button
+                      onClick={() => window.open(project.demo, '_blank')}
+                      className="flex-1 bg-blue-600 text-white border-4 border-black px-4 py-3 font-black hover:bg-blue-700 transform hover:scale-105 hover:-rotate-1 transition-all duration-300 shadow-xl"
+                    >
                       <span className="flex items-center justify-center space-x-2">
                         <Eye size={16} />
                         <span>WITNESS!</span>
                       </span>
                     </button>
-                    <button className="flex-1 bg-white text-black border-4 border-black px-4 py-3 font-black hover:bg-gray-100 transform hover:scale-105 hover:rotate-1 transition-all duration-300 shadow-xl">
+                    <button
+                      onClick={() => window.open(project.code, '_blank')}
+                      className="flex-1 bg-white text-black border-4 border-black px-4 py-3 font-black hover:bg-gray-100 transform hover:scale-105 hover:rotate-1 transition-all duration-300 shadow-xl"
+                    >
                       <span className="flex items-center justify-center space-x-2">
                         <Github size={16} />
                         <span>CODE!</span>
@@ -170,7 +178,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Comic "NEW" Badge */}
+                {/* "NEW" Badge */}
                 <div className="absolute top-4 right-4 w-20 h-20 bg-red-600 border-4 border-black rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse shadow-xl">
                   <span className="text-white font-black text-sm">NEW!</span>
                 </div>
@@ -180,17 +188,25 @@ const Projects = () => {
         </div>
 
         {/* Call to Action */}
-        <div className={`text-center mt-16 transform transition-all duration-1000 delay-800 ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-        }`}>
+        <div
+          className={`text-center mt-16 transform transition-all duration-1000 delay-800 ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          }`}
+        >
           <div className="bg-white border-6 border-black p-8 shadow-2xl transform hover:scale-105 transition-all duration-300">
             <div className="bg-red-600 text-white px-6 py-3 border-3 border-black font-black text-3xl mb-4 inline-block transform rotate-1 shadow-xl">
               WANT MORE ADVENTURES?
             </div>
             <p className="text-black font-bold mb-6 max-w-2xl mx-auto text-lg">
-              VENTURE INTO MY GITHUB FORTRESS FOR MORE LEGENDARY PROJECTS AND CONTRIBUTIONS TO THE OPEN-SOURCE UNIVERSE!
+              VENTURE INTO MY GITHUB FORTRESS FOR MORE LEGENDARY PROJECTS AND
+              CONTRIBUTIONS TO THE OPEN-SOURCE UNIVERSE!
             </p>
-            <button className="bg-yellow-400 text-black border-4 border-black px-8 py-4 font-black text-xl hover:bg-yellow-300 transform hover:scale-110 hover:-rotate-2 transition-all duration-300 shadow-xl">
+            <button
+              onClick={() =>
+                window.open('https://github.com/sai16-hub', '_blank')
+              }
+              className="bg-yellow-400 text-black border-4 border-black px-8 py-4 font-black text-xl hover:bg-yellow-300 transform hover:scale-110 hover:-rotate-2 transition-all duration-300 shadow-xl"
+            >
               <span className="flex items-center space-x-2">
                 <Github size={24} />
                 <span>ENTER THE FORTRESS!</span>
