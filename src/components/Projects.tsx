@@ -27,7 +27,7 @@ const Projects = () => {
         'A POWERFUL full-stack expense tracker built with Flask, React, and Redis. Equipped with JWT shields for secure access, AI warriors to auto-categorize expenses, and dashboards that UNMASK spending villains in real time! Supports multi-payment apps and conquers PDF/Excel files with ease!',
       tags: ['Flask', 'React', 'Redis', 'JWT', 'Vercel', 'Render'],
       image:
-        'public/ai_expense_tracker.png',
+        '/ai_expense_tracker.png',
       color: 'bg-green-600',
       delay: 0,
       demo: 'https://expense-tracker-lake-sigma.vercel.app/',
@@ -37,7 +37,7 @@ const Projects = () => {
   title: 'DIGITAL DESK',
   description: 'An interactive full-stack Todo and workspace app with a React + Vite frontend and Node.js + Express backend. Packed with JWT-based authentication, CRUD-based todo management, drag-and-drop task interface, real-time updates, and a stylish responsive design via Tailwind & Framer Motion.',
   tags: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Tailwind CSS', 'Framer Motion'],
-  image: 'public/digital desk.png',
+  image: '/digital desk.png',
   color: 'bg-purple-600',
   delay: 0,
   demo: 'https://digital-desk.vercel.app/',
